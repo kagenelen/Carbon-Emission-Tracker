@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.1.5",
+    "@mui/x-charts": "^7.22.0",
+    "bcrypt": "^5.1.1",
+    "calculate": "^0.0.0"
+  }
+}

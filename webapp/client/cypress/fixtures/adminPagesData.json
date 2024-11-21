@@ -1,0 +1,123 @@
+{
+  "notAdminError": "Invalid admin permissions, redirecting...",
+  "testUser": {
+    "_id": "673308c37a28504fb8b175f9",
+    "name": "testUserForAdmin",
+    "email": "donotdelete@important.com",
+    "password": "$2a$10$697ddBAH5sR5Ya.E62e.L.KagLnAnXUeVjrYIoFRmXcANt6Eaeb7e", 
+    "permission": 0
+  },
+  "testUserProjectDetails": {
+    "_id": "67330f377a28504fb8b175fa",
+    "userId": "673308c37a28504fb8b175f9",
+    "projectName": "Test Project Do Not Delete",
+    "projectNumber": "991",
+    "date": "2024-11-12",
+    "clientName": "None",
+    "revisionNumber": "1",
+    "transportCo2Rate": 0.22
+  },
+  "testUserProject": {
+    "_id": "67330f377a28504fb8b175fa",
+    "userId": "673308c37a28504fb8b175f9",
+    "projectName": "Test Project Do Not Delete",
+    "projectNumber": "991",
+    "date": "2024-11-12",
+    "clientName": "None",
+    "revisionNumber": "1",
+    "transportCo2Rate": 0.22,
+    "materials": {
+      "Concrete": {
+        "tonnage": 1,
+        "recycled": 2,
+        "truck": 3,
+        "plantCo2Rate": 20,
+        "finalProductCo2Rate": 50,
+        "landfillDist": 40,
+        "plantDist": 30
+      },
+      "Brick": {
+        "tonnage": 2,
+        "recycled": 3,
+        "truck": 4,
+        "plantCo2Rate": 15,
+        "finalProductCo2Rate": 50,
+        "landfillDist": 40,
+        "plantDist": 30
+      },
+      "Black Iron": {
+        "tonnage": 1,
+        "recycled": 1,
+        "truck": 1,
+        "plantCo2Rate": 500,
+        "finalProductCo2Rate": 2400,
+        "landfillDist": 40,
+        "plantDist": 30
+      },
+      "PVC": {
+        "tonnage": 2,
+        "recycled": 2,
+        "truck": 2,
+        "plantCo2Rate": 500,
+        "finalProductCo2Rate": 2100,
+        "landfillDist": 40,
+        "plantDist": 30
+      },
+      "Copper": {
+        "tonnage": 1,
+        "recycled": 1,
+        "truck": 1,
+        "plantCo2Rate": 600,
+        "finalProductCo2Rate": 2800,
+        "landfillDist": 40,
+        "plantDist": 30
+      },
+      "Mixed Metal Scrap": {
+        "tonnage": 2,
+        "recycled": 2,
+        "truck": 2,
+        "plantCo2Rate": 500,
+        "finalProductCo2Rate": 1500,
+        "landfillDist": 40,
+        "plantDist": 30
+      },
+      "Asbestos": {
+        "tonnage": 3,
+        "recycled": 3,
+        "truck": 3,
+        "plantCo2Rate": 0,
+        "finalProductCo2Rate": 0,
+        "landfillDist": 40,
+        "plantDist": 30
+      },
+      "Asbestos Soil": {
+        "tonnage": 4,
+        "recycled": 4,
+        "truck": 4,
+        "plantCo2Rate": 0,
+        "finalProductCo2Rate": 0,
+        "landfillDist": 40,
+        "plantDist": 30
+      },
+      "Mixed Waste": {
+        "tonnage": 5,
+        "recycled": 5,
+        "truck": 5,
+        "plantCo2Rate": 0,
+        "finalProductCo2Rate": 0,
+        "landfillDist": 40,
+        "plantDist": 30
+      },
+      "VENM": {
+        "tonnage": 6,
+        "recycled": 6,
+        "truck": 6,
+        "plantCo2Rate": 0,
+        "finalProductCo2Rate": 0,
+        "landfillDist": 40,
+        "plantDist": 30
+      }
+    }
+  }
+}
+  

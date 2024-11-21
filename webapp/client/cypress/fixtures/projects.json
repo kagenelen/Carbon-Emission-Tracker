@@ -1,0 +1,8 @@
+{
+    "message": "Projects retrieved successfully.",
+    "projects": [
+      { "_id": "1", "projectName": "Project 1", "projectNumber": "1", "date": "2023-01-01" },
+      { "_id": "2", "projectName": "Project 2", "projectNumber": "2", "date": "2023-01-02" }
+    ]
+  }
+  

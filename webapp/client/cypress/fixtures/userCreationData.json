@@ -1,0 +1,15 @@
+{
+    "validUser": {
+      "companyName": "Valid Company",
+      "email": "user@example.com",
+      "password": "password123",
+      "confirmPassword": "password123"
+    },
+    "invalidUser": {
+      "companyName": "Test Company",
+      "email": "test@example.com",
+      "password": "password123",
+      "confirmPassword": "differentPassword"
+    }
+  }
+  

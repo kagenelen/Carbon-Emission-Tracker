@@ -1,0 +1,73 @@
+# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
+# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
+
+name: Tests
+
+on:
+  push:
+    branches: []
+
+jobs:
+  Backend-Tests:
+    runs-on: ubuntu-latest
+    strategy: 
+      matrix:
+        node-version: [20.x]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        working-directory: ./webapp/server
+        run: npm install
+      - name: Run vitest
+        working-directory: ./webapp/server
+        env:
+          ATLAS_URI: 'mongodb+srv://georginabrowning0:8MmajQrxJGyoaiw0@cluster0.vkwpm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+          BASE_URL: 'http://localhost:3001'
+          WEB_URL: 'http://localhost:5173'
+          JWT_SECRET: 'three9ZER0dK0X504pJA'
+        run: npx vitest --config=./vitest.config.js --bail=1 --retry=1
+  
+  Cypress-Tests:
+    runs-on: ubuntu-latest
+    strategy: 
+      matrix:
+        node-version: [20.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install backend dependencies
+        working-directory: ./webapp/server
+        run: npm install
+      - name: Run backend
+        working-directory: ./webapp/server
+        run: node server.js &
+        env: 
+          DATABASE_NAME: 'production'
+          ATLAS_URI: 'mongodb+srv://georginabrowning0:8MmajQrxJGyoaiw0@cluster0.vkwpm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+          BASE_URL: 'http://localhost:3001'
+          WEB_URL: 'http://localhost:5173'
+          JWT_SECRET: 'three9ZER0dK0X504pJA'
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        timeout-minutes: 15
+        with:
+          working-directory: ./webapp/client
+          record: false
+          browser: chrome
+          build: npm install
+          start: npm run dev
+          wait-on: 'http://localhost:5173'
+        env:
+          CYPRESS_RECORD_KEY: 'e2949172-bd5e-4bbd-86d5-ff592a1d5b16'
+          BASE_URL: 'http://localhost:3001'
+          WEB_URL: 'http://localhost:5173'

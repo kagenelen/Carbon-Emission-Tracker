@@ -1,0 +1,311 @@
+:root {
+    /* Primary Theme Colors */
+    --md-sys-color-primary: #2F4F2F; /* Dark green color */
+    --md-sys-color-on-primary: #ffffff; /* White text on primary */
+  
+    /* Button Colors */
+    --md-sys-color-primary-container: #000000; /* Button background color */
+    --md-sys-color-on-primary-container: #ffffff; /* Button text color */
+    /* Secondary button colors, used for delete account button */
+    --md-sys-color-secondary-container: #8f0f0f; /* Button background color */
+    --md-sys-color-on-secondary-container: #ffffff; /* Button text color */
+    /* Outlined button colors, used for back buttons */
+    /* --md-outlined-button-label-text-color: #111111; */
+    --md-outlined-button-container-shape: 20px;
+    --md-outlined-button-outline-color: #D9D9D9;
+
+
+    /* Other Theme Variables */
+    --md-sys-color-surface: #ffffff; /* Background color */
+    --md-sys-color-on-surface: #000000; /* Text color on background */
+    --md-sys-color-background: #F9F9F9;
+  
+    /* Text Fields */
+    --md-sys-color-outline: #D9D9D9; /* Outline color for text fields */
+
+    /* Use Inter font throughout the application */
+    --md-sys-typescale-body: "Inter", sans-serif;
+    --md-sys-typescale-body-large-font: "Inter", sans-serif;
+    --md-sys-typescale-label-large-font: "Inter", sans-serif;
+    /* --supporting-text-font: "Inter", sans-serif; */
+    /* --md-outlined-field-supporting-text-font: "Inter", sans-serif; */
+    --md-ref-typeface-plain: "Inter", sans-serif;
+
+    /* Form container properties */
+    --form-border-radius: 12px;
+    --form-padding: 30px;
+  }
+  
+  /* Styling for a filled button */
+  md-filled-button {
+    --md-sys-color-primary: var(--md-sys-color-primary-container);
+    --md-sys-color-on-primary: var(--md-sys-color-on-primary-container);
+    width: 200px;
+  }
+
+  /* Styling for an outlined button */
+  md-outlined-button {
+    width: 200px;
+  }
+
+  /* Styling for outlined text field */
+  md-outlined-text-field {
+    background-color: var(--md-sys-color-surface);
+    padding:'0.5rem';
+  }
+
+  /* Styling for forms */
+  form {
+    align-items: center;
+    background-color: var(--md-sys-color-surface);
+    padding: var(--form-padding);
+    border-radius: var(--form-border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for form containers */
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }  
+
+  /* Styling for Menus */
+  md-menu {
+    background-color: var(--md-sys-color-surface);
+    padding: var(--form-padding);
+    border-radius: var(--form-border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for form containers */
+    max-width: 400px;
+    float:left;
+    text-align: left;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  md-submenu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--md-sys-color-background);
+  }
+
+  /* Used for application name */
+  h1 {
+    text-align: center;
+    color: #2F4F2F;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin: auto;
+    margin-bottom: 10px;
+    padding-top: 40px;
+    cursor: pointer;
+    /* cursor: auto; */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    color: gray;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-left: 5px;
+    text-align: left;
+  }
+
+  /* General page container styles */
+  .page-container {
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    padding-top: 40px;
+    position: relative;
+  }
+
+  .page-container-wide {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding-top: 40px;
+    position: relative;
+  }
+
+  .page-container-widest {
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+    padding-top: 10px;
+    position: relative;
+  }
+
+  /* Project list table */
+  .project-table {
+    background-color: var(--md-sys-color-surface);
+    min-height: 300px;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    margin: 20px;
+  }
+
+  /* Project list table row style */
+  .project-row {
+    cursor: pointer;
+  }
+
+  .project-row:hover {
+    background-color: #73af73;
+  }
+
+  /* Specific style for project name cell */
+  .project-table-project {
+    font-size: 1.25rem;
+  }
+
+  /* Specific style for project date cell */
+  .project-table-date {
+    text-align: right;
+    color: #777777;
+  }
+
+  /* Styles for user table on admin user list page*/
+  .user-table-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    width: 40%;
+  }
+  .user-table-link > * {
+    text-align: center;
+  }
+  .user-table-link {
+    cursor:pointer;
+    font-size: 1.25rem;
+    width: 30%;
+  }
+  .user-table-link:hover {
+    color: var(--md-sys-color-primary);
+    background-color: #F9F9F9;
+  }
+  .user-table-projects {
+    text-align: right;
+  }
+  .back-button-container {
+    position: absolute;
+    border-radius: var(--md-outlined-button-container-shape);
+    top: 100px;
+    left: 20px; 
+  }
+  /* Used for login/registration form links */
+  .hyperlink-padded {
+    display: block;
+    color:#000000;
+    padding-top: 25px;
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+  
+  /* Used for forgot password link */
+  .hyperlink {
+    color:#000000;
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+
+  /* Container used for layout header */
+  .heading-container {
+    margin: auto;
+    width: fit-content;
+  }
+
+  /* Container used for logos in the layout header */
+  .logo-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;  /* Ensure the logo stays on top */
+  }
+
+  /* Logo size for layout header */
+  .logo {
+    width: 80px;
+  }
+
+  /* Layout header account name */
+  .account-name {
+    position: absolute;
+    top: 30px;
+    left: 70px;
+  }
+
+  /* Layout header account icon */
+  .account-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 40px;
+    width: auto;
+    cursor: pointer;
+  }
+
+  /* Logo size for profile pages header */
+  .profile-logo {
+    width: 130px;
+  }
+
+  /* Profile name for profile pages header */
+  .profile-name {
+    text-align: center;
+    margin: 20px 30px;
+    font-size: 1.2rem; 
+  }
+
+  .data-form {
+    max-width: 800px;
+  }
+
+  .main-box {
+    flex-grow: 1;
+    margin: 0px 10px 10px 10px;
+  }
+
+  .tabs {
+    border-bottom: 1;
+    border-color: divider;
+  }
+
+  .dialog-cell {
+    word-wrap: break-word;
+    white-space: normal;
+  }
+
+  .data-form {
+    max-width: 100%;
+  }
+
+  .data-button {
+    max-width: 200px;
+    margin: auto;
+  }
+
+  .forecast-field {
+    margin-bottom: '1rem';
+    width: 100%;
+  }
+
+  .forecast-label {
+    margin-bottom: '0.7rem';
+  }
+  
+  .chart-container {
+    border: 2px solid #ccc; /* Light gray border */
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for a subtle effect */
+  }

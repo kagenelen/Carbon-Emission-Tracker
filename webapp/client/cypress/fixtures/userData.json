@@ -1,0 +1,9 @@
+{
+    "validEmail": "test@example.com",
+    "invalidEmail": "",
+    "validPassword": "password123",
+    "mismatchedPassword": "differentPassword",
+    "userId": "12345",
+    "validToken": "validToken"
+  }
+  
